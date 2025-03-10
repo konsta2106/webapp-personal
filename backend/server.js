@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import fuelRoutes from "./routes/fuelRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -10,9 +11,13 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// API route (example: fetch external API data)
-app.get("/api/data", async (req, res) => {
-  res.json({ message: "Hello from backend!" });
+// Routes
+app.use("/api/fuel", fuelRoutes);
+
+// Error-handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Internal Server Error' });
 });
 
 // Start server
