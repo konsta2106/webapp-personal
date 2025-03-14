@@ -25,6 +25,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - /docker/nginx:/docker/nginx:ro
     depends_on:
       - frontend
       - backend
