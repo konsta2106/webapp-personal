@@ -18,6 +18,8 @@ services:
       - NODE_ENV=production
     networks:
       - app-network
+    env_file:
+      - ./backend/.env
 
   nginx:
     build:
