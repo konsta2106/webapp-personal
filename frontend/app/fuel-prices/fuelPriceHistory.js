@@ -76,7 +76,7 @@ const FuelPricesHistoryChart = () => {
 
   return (
     <div>
-      <h3>95 Fuel Price History for Tampere</h3>
+      <h3>95 Fuel Price History - Tampere</h3>
       <Chart options={chartData.options} series={chartData.series} type="line" height={350} />
     </div>
   );
