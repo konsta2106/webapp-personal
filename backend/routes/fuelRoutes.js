@@ -32,7 +32,16 @@ const cacheMiddleware = (key, fetchFunction) => async (req, res, next) => {
 };
 
 // Routes
-router.get('/tampere', getFuelPricesTampere);
+router.get('/tampere', async (req, res) => {
+  try {
+    const data = await getFuelPricesTampere(req);
+    console.log('Fetched data:', data);
+    res.json(data); // Send the fetched data as a JSON response
+  } catch (error) {
+    console.error('Error fetching fuel prices:', error);
+    res.status(500).json({ error: 'Failed to fetch fuel prices' }); // Send an error response
+  }
+});
 
 router.get('/tampere-history', cacheMiddleware('fuelPriceHistoryTampere', async (req) => {
   const data = await getFuelPriceHistoryTampere(req);

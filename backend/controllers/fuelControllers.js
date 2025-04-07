@@ -10,6 +10,7 @@ export const getFuelPricesTampere = async (req, res) => {
         console.log('Fetching latest fuel prices...');
         const response = await axios.get(`${host}/api/httpTriggerGetLatestFuelPrices?code=${fuelApiCode}`);
         if (response.data) {
+            console.log(response.data);
             return response.data;
         }
     } catch (error) {
