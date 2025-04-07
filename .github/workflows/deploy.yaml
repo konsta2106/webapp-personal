@@ -9,10 +9,16 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
+
+      # Echo a message indicating the pipeline is running
+      - name: Echo pipeline status
+        run: echo "The deployment pipeline is now running..."
+
       - name: Create .env file in backend folder
         run: |
           echo "FUEL_API_CODE=${{ secrets.WEBAPP_FUEL_API_CODE }}" > backend/.env
           echo "HOST=${{ secrets.WEBAPP_HOST }}" >> backend/.env
+
       - name: Deploy with Docker Compose
         run: |
           docker compose down
