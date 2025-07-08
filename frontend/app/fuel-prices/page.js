@@ -6,7 +6,7 @@ export default function FuelPrices() {
       <>
       <main className="container">
         <section id="general" className="my-5">
-          <h1>Fuel Prices</h1>
+          <h1>Fuel Prices - Tampere</h1>
           <FuelPricesHistoryChart />
           <FuelPricesTampere />
         </section>
