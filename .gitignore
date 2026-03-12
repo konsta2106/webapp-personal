@@ -28,6 +28,9 @@ build/
 .DS_Store
 *.pem
 
+# Azurite local Azure Storage emulator
+__azurite_db_*.json
+
 # VS Code
 .vscode/
 
