@@ -206,6 +206,17 @@ html {
   cursor: not-allowed;
 }
 
+/* Skills view toggle hover states */
+.skills-toggle .btn-outline-warning {
+  --bs-btn-hover-color: #495057;
+  --bs-btn-hover-bg: #e9ecef;
+  --bs-btn-hover-border-color: #ced4da;
+  --bs-btn-active-color: #495057;
+  --bs-btn-active-bg: #e9ecef;
+  --bs-btn-active-border-color: #ced4da;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+}
+
 /* Sticky footer pattern */
 main {
   flex: 1 0 auto; /* Grow to push footer down */
