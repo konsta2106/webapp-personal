@@ -11,10 +11,10 @@ export default function Skills() {
   const [groupBy, setGroupBy] = useState('level');
 
   const proficiencyMeta = {
-    advanced: { variant: 'warning', label: 'Advanced', description: 'Strong day-to-day expertise' },
-    proficient: { variant: 'success', label: 'Proficient', description: 'Comfortable in regular project use' },
-    working_knowledge: { variant: 'info', label: 'Working Knowledge', description: 'Can contribute with occasional guidance' },
-    basic_familiarity: { variant: 'secondary', label: 'Basic Familiarity', description: 'Foundational understanding' }
+    advanced: { variant: 'warning', label: 'Advanced' },
+    proficient: { variant: 'success', label: 'Proficient' },
+    working_knowledge: { variant: 'info', label: 'Working Knowledge' },
+    basic_familiarity: { variant: 'secondary', label: 'Basic Familiarity' }
   };
 
   const proficiencyOrder = ['advanced', 'proficient', 'working_knowledge', 'basic_familiarity'];
@@ -65,9 +65,6 @@ export default function Skills() {
     <section id="skills" className="my-5 py-5" style={{ backgroundColor: '#f8f9fa' }}>
       <div className="container">
         <h1 className="section-title mb-5">Skills</h1>
-        <p className="text-center mb-5" style={{ color: 'var(--primary-dark-grey)', maxWidth: '700px', margin: '0 auto' }}>
-          Browse skills by proficiency level or by category. Proficiency colors stay consistent in both views.
-        </p>
         <div className="d-flex justify-content-center mb-4 skills-toggle">
           <ButtonGroup aria-label="Skills grouping options">
             <Button
@@ -114,9 +111,6 @@ export default function Skills() {
                     <Card.Title style={{ color: 'var(--primary-orange)', fontWeight: '600', marginBottom: '0.5rem', fontSize: '1.2rem' }}>
                       {levelMeta.label}
                     </Card.Title>
-                    <p style={{ fontSize: '0.875rem', color: 'var(--primary-dark-grey)', marginBottom: '1rem' }}>
-                      {levelMeta.description}
-                    </p>
                     <div className="d-flex flex-wrap gap-2">
                       {skills.length === 0 && (
                         <span style={{ color: 'var(--primary-dark-grey)', fontSize: '0.9rem' }}>No skills listed.</span>
