@@ -157,14 +157,14 @@ export default function Skills() {
                           <Badge
                             key={skill.id}
                             bg={levelMeta.variant}
-                            className="skill-badge"
-                            style={{ padding: '0.5rem 0.75rem', fontSize: '0.875rem', fontWeight: '500' }}
-                            title={`Proficiency: ${levelMeta.label}`}
-                          >
-                            {skill.name} - {levelMeta.label}
-                          </Badge>
-                        );
-                      })}
+                          className="skill-badge"
+                          style={{ padding: '0.5rem 0.75rem', fontSize: '0.875rem', fontWeight: '500' }}
+                          title={`Proficiency: ${levelMeta.label}`}
+                        >
+                            {skill.name}
+                        </Badge>
+                      );
+                    })}
                     </div>
                   </Card.Body>
                 </Card>
