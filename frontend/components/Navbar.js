@@ -9,7 +9,7 @@ const CustomNavbar = () => {
   return (
     <Navbar className="p-3 mb-2 text-white" bg='dark' data-bs-theme="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand as={Link} href="/">My Portfolio</Navbar.Brand>
+        <Navbar.Brand as={Link} href="/">konsuu.net</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">

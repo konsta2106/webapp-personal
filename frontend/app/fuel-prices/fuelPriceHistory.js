@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import dayjs from 'dayjs';
+import { Card } from 'react-bootstrap';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
@@ -16,7 +17,7 @@ const FuelPricesHistoryChart = () => {
         show: true,
         width: 2,
         curve: 'smooth',
-        colors: ['#0000FF'],
+        colors: ['#f9ab00'],
       },
       xaxis: {
         type: 'datetime',
@@ -28,7 +29,7 @@ const FuelPricesHistoryChart = () => {
       },
       markers: {
         size: 5,
-        colors: ['#1a73e8'],
+        colors: ['#f9ab00'],
         strokeColors: '#fff',
         strokeWidth: 2,
         hover: { size: 7 },
@@ -75,10 +76,16 @@ const FuelPricesHistoryChart = () => {
   }
 
   return (
-    <div className="container mt-4">
-      <h3 className="text-center mb-4">95 Fuel Price History - Tampere</h3>
-      <Chart options={chartData.options} series={chartData.series} type="line" height={350} />
-    </div>
+    <section className="my-5 py-5">
+      <div className="container">
+        <h1 className="section-title mb-5">95 Fuel Price History - Tampere</h1>
+        <Card style={{ border: 'none', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
+          <Card.Body className="p-4">
+            <Chart options={chartData.options} series={chartData.series} type="line" height={350} />
+          </Card.Body>
+        </Card>
+      </div>
+    </section>
   );
 };
 

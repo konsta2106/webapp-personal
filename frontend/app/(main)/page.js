@@ -1,20 +1,18 @@
-import Head from 'next/head';
 import AboutMe from './about-me';
 import Skills from './skills';
-import ContactForm from './contact-form';
+import Contact from './contact';
+
+export const metadata = {
+  title: 'konsuu.net - Konstantin Suutarinen',
+  description: 'Personal hub of Konstantin Suutarinen - Integration Specialist based in Tampere, Finland'
+};
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>My Portfolio</title>
-        <meta name="description" content="Welcome to my portfolio!" />
-      </Head>
-      <main className="container">
-        <AboutMe />
-        <Skills />
-        <ContactForm />
-      </main>
-    </>
+    <main className="container">
+      <AboutMe />
+      <Skills />
+      <Contact />
+    </main>
   );
 }

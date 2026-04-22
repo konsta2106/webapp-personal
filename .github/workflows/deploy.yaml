@@ -19,6 +19,11 @@ jobs:
         run: |
           echo "FUEL_API_CODE=${{ secrets.WEBAPP_FUEL_API_CODE }}" > backend/.env
           echo "HOST=${{ secrets.WEBAPP_HOST }}" >> backend/.env
+          echo "CV_API_HOST=${{ secrets.WEBAPP_CV_API_HOST }}" >> backend/.env
+          echo "CV_API_KEY=${{ secrets.WEBAPP_CV_API_KEY }}" >> backend/.env
+          echo "RESEND_API_KEY=${{ secrets.WEBAPP_RESEND_API_KEY }}" >> backend/.env
+          echo "EMAIL_TO=${{ secrets.WEBAPP_EMAIL_TO }}" >> backend/.env
+          echo "EMAIL_FROM=${{ secrets.WEBAPP_EMAIL_FROM }}" >> backend/.env
 
       - name: Deploy with Docker Compose
         run: |
